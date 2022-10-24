@@ -30,6 +30,10 @@ footer{
 header{
     background-color: gray;
 }
+.Cadastro-local{
+    padding-left: 20px;
+    padding-right: 20px;
+}
 /*Componentes Conteudo*/
 img{
     width: 400px;

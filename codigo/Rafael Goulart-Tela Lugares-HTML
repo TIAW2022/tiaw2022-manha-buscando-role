@@ -37,6 +37,10 @@
         </div>
       </div>
 
+<div class="Cadastro-local">
+        <button class="btn btn btn-secondary" type="button">Cadastrar Local</button>
+       </div>
+
      <div>
       <button class="btn btn btn-secondary" type="button">Filtrar</button>
      </div>

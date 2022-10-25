@@ -31,8 +31,22 @@ header{
     background-color: gray;
 }
 .Cadastro-local{
+ position: absolute;
+    right: 330px;
     padding-left: 20px;
     padding-right: 20px;
+}
+.pesquisa1{
+    position: absolute;
+    left: 850px;
+}
+.Filtrar1{
+    position: absolute;
+    right: 260px;
+}
+.menu{
+    position: absolute;
+    right: 500px;
 }
 /*Componentes Conteudo*/
 img{

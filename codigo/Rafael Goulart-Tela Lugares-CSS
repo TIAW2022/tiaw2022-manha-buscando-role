@@ -21,14 +21,15 @@ main{
     background-color: lightgray;
 }
 footer{
-    background-color: gray;
+    background-color: #675f64;
     clear: both;
     text-align: center;
     padding: 30px 0;
 }
 /*Componentes Header*/
 header{
-    background-color: gray;
+    background-color: #675f64;
+    padding: 20px;
 }
 .Cadastro-local{
  position: absolute;

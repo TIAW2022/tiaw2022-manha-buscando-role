@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cadastro.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div class="main">
+      <section class="register-section">
+        <div class="hero-container">
+          <a class="back-btn" href="index.html"> < </a>
+          <form class="register-form" method="post" action="/cadastrado">
+            <div class="left-container">
+              <h1>Cadastrar Lugar</h1>
+              <div class="center-between">
+                <div class="name-container">
+                  <div>
+                    <label for="fname-local">Nome do local</label>
+                    <br />
+                    <input type="text" id="fname-local" name="fname-local" />
+                  </div>
+                  <div>
+                    <label for="flocal">Localização</label>
+                    <br />
+                    <input type="text" id="flocal" name="flocal" />
+                  </div>
+                </div>
+                <div class="image-container">
+                  <label class="file-upload">
+                    <input
+                      type="file"
+                      name="fimage"
+                      id="fimage"
+                      accept=".png,.jpg"
+                    />
+                    +
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="right-container">
+              <div class="cnpj-container">
+                <div>
+                  <label for="fname-owner">Nome do proprietário</label>
+                  <br />
+                  <input type="text" id="fname-owner" name="fname-owner" />
+                </div>
+                <div>
+                  <label for="fcnpj">CNPJ</label>
+                  <br />
+                  <input type="text" id="fcnpj" name="fcnpj" />
+                </div>
+              </div>
+              <input type="submit" value="Cadastrar" class="submit-btn" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

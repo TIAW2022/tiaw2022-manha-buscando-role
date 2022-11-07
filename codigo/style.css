@@ -1,0 +1,88 @@
+/*Componentes de estrutura*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    font-weight: 500;
+}
+header{
+    background-color: gray;
+    height: 70px;
+    border-bottom: solid 1px lightgray;
+    padding: 0px;
+}
+main{
+    background-color: lightgray;
+}
+footer{
+    background-color: #675f64;
+    clear: both;
+    text-align: center;
+    padding: 30px 0;
+}
+/*Componentes Header*/
+header{
+    background-color: #675f64;
+    padding: 20px;
+}
+.Cadastro-local{
+    position: absolute;
+    right: 330px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.pesquisa1{
+    position: absolute;
+    left: 850px;
+}
+.Filtrar1{
+    position: absolute;
+    right: 260px;
+}
+.menu{
+    position: absolute;
+    right: 500px;
+}
+/*Componentes Conteudo*/
+img{
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    padding: 0px;
+}
+section{
+    border-bottom: solid 3px gray;
+}
+.postagem1{
+    padding-top: 30px;
+    font-size: 15px;
+    background-color: aliceblue;
+}
+.postagem2{
+    padding-top: 60px;
+    font-size: 15px;
+    background-color: aliceblue;
+}
+.postagem3{
+    padding-top: 50px;
+    font-size: 15px;
+    background-color: aliceblue;
+}
+.postagem4{
+    padding-top: 60px;
+    font-size: 15px;
+    background-color: aliceblue;
+}
+.postagem5{
+    padding-top: 70px;
+    font-size: 15px;
+    background-color: aliceblue;
+}
+

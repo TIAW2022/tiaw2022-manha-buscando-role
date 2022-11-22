@@ -1,0 +1,52 @@
+/*Componentes de Estrutura*/
+html{
+    background-color: #675f64;
+}
+main{
+    background-color: #675f64;
+    margin: 0px;
+    padding: 80px;
+}
+/*Menu*/
+.navbar{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.Cadastro-local{
+    position: absolute;
+    right: 330px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.pesquisa1{
+    position: absolute;
+    left: 850px;
+}
+.Filtrar1{
+    position: absolute;
+    right: 260px;
+}
+.menu{
+    position: absolute;
+    right: 500px;
+}
+.nav-link{
+    color: rgb(185, 184, 184) !important; 
+}
+.btn{
+    background-color:rgb(36, 19, 19);;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+/*Formulario*/
+.form-group{
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(36, 19, 19);
+}
+.form-control{
+   background-color: whitesmoke;
+}
+.Cadastro{
+background-color: rgb(36, 19, 19);
+color: white;
+}

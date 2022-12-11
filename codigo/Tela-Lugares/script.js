@@ -22,4 +22,16 @@ listaDeLugares.forEach(encontrarLugar => {
 
 }
 
-
+function validacao(){
+    var x ;
+    let confirma = confirm('Você está acessando diretamente de uma conta CNPJ?');
+    
+    if(confirma == true){
+        x= alert('Acesso permitido')
+    }
+    else{
+        if(confirma == false){
+            x= alert('Acesso negado')
+        }  
+    }
+}

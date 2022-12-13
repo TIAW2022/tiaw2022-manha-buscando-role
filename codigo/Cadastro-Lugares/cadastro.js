@@ -1,29 +1,49 @@
-function cadastroFeito(){
-    let confirma = confirm('Confirmar o cadastro?');
+const reader = new FileReader();
+var imagem
 
-    if(confirma) {
+document.getElementById("formFile").addEventListener("change", function(){
+  reader.addEventListener("load", function(){
+      imagem = reader.result;
+  });
 
-        var arrayPessoas=[]
+  reader.readAsDataURL(this.files[0])
+});
 
-    if(JSON.parse(localStorage.getItem("pessoas")) != null){
-        arrayPessoas.push(JSON.parse(localStorage.getItem("pessoas")));
-    }   
+function cadastroFeito() {
+  let confirma = confirm("Confirmar o cadastro?");
+
+  if (confirma) {
+    var arrayestabelecimentos = [];
+
+    if (JSON.parse(localStorage.getItem("estabelecimentos")) != null) {
+      arrayestabelecimentos = JSON.parse(
+        localStorage.getItem("estabelecimentos")
+      );
+    }
     var nome = document.getElementById("inputNome").value;
     var cnpj = document.getElementById("inputCnpj").value;
-    var cidade = document.getElementById("inputCidade").value;
+    //var imagem = document.getElementById("formFile").value;
     var telefone = document.getElementById("inputTelefone").value;
     var email = document.getElementById("inputEmail").value;
     var endereco = document.getElementById("inputEndereco").value;
-    
-    var pessoa = {nome: nome, cnpj: cnpj, cidade: cidade, telefone: telefone, email: email, endereco: endereco};
-    arrayPessoas.push(pessoa);
-    var pessoaJson = JSON.stringify(arrayPessoas);
-    localStorage.setItem("pessoas", pessoaJson);
-    
-    alert('Cadastro Feito com Sucesso!');
-        
-    }
-    else alert('Cadastro cancelado')
+
+    let tipoHTML = document.getElementById("inputTipo");
+    var tipo = tipoHTML.options[tipoHTML.selectedIndex].text;    
+
+    var estabelecimento = {
+      "nome": nome,
+      "cnpj": cnpj,
+      "imagem": imagem,
+      "telefone": telefone,
+      "email": email,
+      "endereco": endereco,
+      "tipo": tipo
+    };
+
+    arrayestabelecimentos.push(estabelecimento);
+    var estabelecimentoJson = JSON.stringify(arrayestabelecimentos);
+    localStorage.setItem("estabelecimentos", estabelecimentoJson);
+
+    alert("Cadastro Feito com Sucesso!");
+  } else alert("Cadastro cancelado");
 }
-
-

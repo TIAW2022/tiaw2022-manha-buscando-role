@@ -5,17 +5,11 @@ html{
 main{
     background-color: #675f64;
     margin: 0px;
-    padding: 80px;
+    padding: 60px;
 }
 /*Menu*/
 .navbar{
     background-color: rgba(0, 0, 0, 0.7);
-}
-.Cadastro-local{
-    position: absolute;
-    right: 330px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 .pesquisa1{
     position: absolute;
@@ -42,6 +36,8 @@ main{
     font-size: 30px;
     font-weight: 900;
     color: rgb(36, 19, 19);
+    margin: 0px;
+    padding: 0px;
 }
 .form-control{
    background-color: whitesmoke;
@@ -49,4 +45,22 @@ main{
 .Cadastro{
 background-color: rgb(36, 19, 19);
 color: white;
+}
+#inputImagem{
+    width: 200px;
+    padding: 10px;
+    margin: 30px;
+}
+.form-label{
+    color:rgb(36, 19, 19);
+}
+.options{
+    position: absolute;
+    left: 250px;
+    bottom: 40px;
+}
+#inputTipo{
+    position: absolute;
+    left: 250px;
+    bottom: 0px;
 }

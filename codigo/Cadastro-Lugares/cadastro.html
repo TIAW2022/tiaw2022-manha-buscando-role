@@ -12,37 +12,39 @@
 
     <!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-light ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Página Inicial <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Lugares</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Opções
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Filtrar</a>
-                <a class="dropdown-item" href="cadastro.html">Cadastrar Local</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Avaliações e Comentários</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar lugares" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
-        </div>
-      </nav>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Página Inicial <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Lugares</a>
+          </li>
+          <li>
+            <a class="nav-link" onclick="validacao()" href="cadastro.html">Cadastrar Local</a>
+          </li>        
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Opções
+            </a>
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Filtrar</a>
+              <a class="dropdown-item" onclick="validacao()" href="Cadastro-Lugares/cadastro.html">Cadastrar Local</a>
+            </div>          
+          </li>-->
+          <!--
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Avaliações e Comentários</a>
+          </li>
+          -->
+        </ul>
+      </div>
+    </nav>
       <!--Formulário-->
     <main>
         <form>
@@ -65,22 +67,23 @@
               <input type="text" class="form-control" id="inputEndereco" placeholder="Digite o endereço">
             </div>
             <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCidade">Cidade:</label>
-                <input type="text" class="form-control" id="inputCidade">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputEstado">Estado:</label>
-                <select id="inputEstado" class="form-control">
-                  <option selected>MG</option>
-                </select>
+              <div class="mb-3">
+                <label for="formFile" class="form-label" style="font-weight: bold; font-size: 17px;">Foto da Propriedade</label>
+                <input class="form-control" type="file" id="formFile">
               </div>
               <div class="form-group col-md-2">
                 <label for="inputTel">Telefone:</label>
                 <input type="tel" class="form-control" id="inputTelefone">
+
+                <label class="options" for="inputTipo">Tipo: </label>
+                <select id="inputTipo">
+                  <option value="bar">bar</option>
+                  <option value="restaurante" selected="selected">restaurante</option>
+                  <option value="pub">pub</option>
+                </select>
               </div>
             </div>
-            <button type="submit" onclick="cadastroFeito()" class="btn btn-primary Cadastro">Cadastrar</button>
+            <button id="buttonCadastro" type="button" onclick="cadastroFeito()" class="btn btn-primary Cadastro">Cadastrar</button>
           </form>
     </main>
     

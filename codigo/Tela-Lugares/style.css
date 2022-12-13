@@ -59,40 +59,43 @@ footer{
     background-color:#675f64 ;
 }
 /*Componentes Conteudo*/
-img{
-    border-radius: 5px;
-    width: 400px;
-    height: 400px;
-    margin: 30px;
-    padding: 0px;
+.dropdown button{
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
 }
-section{
-    border-bottom: solid 3px gray;
+
+.dropdown button:hover{
+    background-color: lightgreen;
 }
-.postagem1{
-    padding-top: 30px;
-    font-size: 15px;
-    background-color: aliceblue;
+
+#tela{
+    align-items: stretch;
 }
-.postagem2{
-    padding-top: 60px;
-    font-size: 15px;
-    background-color: aliceblue;
+.card{
+    border-radius: 20px;
+    border-color: rgb(107, 28, 14);
+    border-width: 5px;
+    width: 100%;
 }
-.postagem3{
-    padding-top: 50px;
-    font-size: 15px;
-    background-color: aliceblue;
+.card-body{
+    padding: 60px;
+    margin: 0px;
 }
-.postagem4{
-    padding-top: 60px;
-    font-size: 15px;
-    background-color: aliceblue;
+.card-img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
 }
-.postagem5{
-    padding-top: 70px;
-    font-size: 15px;
-    background-color: aliceblue;
+.card-link{
+    color: rgb(107, 28, 14);
+    font-weight: 900;
+}
+.list-group-item{
+    font-size: 20px;
+    font-weight: 900;
 }
 /*Breakpoint celular*/
 @media screen and (min-width: 400px) and (max-width: 768px){

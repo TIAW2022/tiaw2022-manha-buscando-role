@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/850a0de5b4.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" >
+    <title>Tela Lugares</title>
+</head>
+<body>
+
+     <!-- Cabecalho-->
+ 
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Página Inicial <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Lugares</a>
+        </li>
+        <li>
+          <a class="nav-link" onclick="validacao()" href="Cadastro-Lugares/cadastro.html">Cadastrar Local</a>
+        </li>        
+        <!--<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Opções
+          </a>
+          
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Filtrar</a>
+            <a class="dropdown-item" onclick="validacao()" href="Cadastro-Lugares/cadastro.html">Cadastrar Local</a>
+          </div>          
+        </li>-->
+        <!--
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Avaliações e Comentários</a>
+        </li>
+        -->
+      </ul>
+    
+    </div>
+  </nav>
+     <!-- Conteudo-->
+     <main>      
+      <div class="container">
+        <div class="row">
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Filtrar
+            </a>
+          
+            <ul class="dropdown-menu">
+              <li><button onclick="filtrar('')">Todos</button></li>
+              <li><button onclick="filtrar('bar')">Bar</button></li>
+              <li><button onclick="filtrar('restaurante')">Restaurante</button></li>
+              <li><button onclick="filtrar('pub')">Pub</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row" id="tela">
+  
+  
+          </div>
+        </div>
+</main>
+
+     <!-- Footer-->
+     <footer class="container">
+       <a class="texto-footer" href="#">Buscando Rolê-2022</a> 
+     </footer>
+     
+     <script src="script.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+      function filtrar(filtro){
+        let cards = document.querySelectorAll("#tela .card");
+
+        for(let i = 0; i < cards.length; i++){
+          if(cards[i].classList.contains(filtro) || filtro == ""){
+            cards[i].style.display = "flex"
+          }
+
+          else{
+            cards[i].style.display = "none"
+          }
+        }
+      }
+    </script>
+</body>
+</html>
